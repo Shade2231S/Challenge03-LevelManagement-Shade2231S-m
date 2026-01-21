@@ -5,7 +5,7 @@ public class LevelChange : MonoBehaviour
     public LevelManager levelmanager;
     private void Start()
     {
-        levelmanager = Ervice.Instance.levalManager;
+        levelmanager = Ervice.Instance.levelManager;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {

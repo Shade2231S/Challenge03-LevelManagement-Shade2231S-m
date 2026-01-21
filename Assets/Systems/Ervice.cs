@@ -4,13 +4,13 @@ public class Ervice : MonoBehaviour
 {
     public static Ervice Instance { get; private set; }
     [Header("Manager Refrence")]
-    [SerializeField] public LevelManager levelManager;
+    [SerializeField] private LevelManager levelManager;
     [SerializeField] private PlayerController playercontroller;
     private void Awake()
     {
         if (Instance != null && Instance != this)
         {
-            Destroy();
+            //Destroy();
         }
         else
         {
