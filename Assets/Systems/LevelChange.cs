@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class LevelChange : MonoBehaviour
 {
-    public LevelManager levelmanager;
+    public LevelManager levelManager;
+    public GameObject leveltoactivate;
+    public Transform spawnlocation;
     private void Start()
     {
-        levelmanager = Ervice.Instance.levelManager;
+       levelManager = Ervice.Instance.levelmanager;
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            levelmanager.levelchange();
+            levelManager.levelchange();
         }
     }
 }
